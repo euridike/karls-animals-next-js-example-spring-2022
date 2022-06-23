@@ -1,40 +1,21 @@
-import { css } from '@emotion/react';
 import Head from 'next/head';
-import Link from 'next/link';
-
-const headerStyles = css`
-  padding: 8px 14px;
-  background: #ddd;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-
-  > div > a + a {
-    marging-left: 10px;
-  }
-`;
+import Image from 'next/image';
+import Layout from '../components/Layout';
+import macaca from '../public/macaca.jpeg';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Home page</title>
+        <title>Shop Home Page</title>
         <meta name="description" content="DAshboard for application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header css={headerStyles}>
-        🐵
-        <Link href="/team">Team</Link>
-        <div>
-          <Link href="/about">About</Link>
-        </div>
-      </header>
-
       <main>
-        <h1>Animal park</h1>
+        <h1>Shop</h1>
 
-        <p>Get started by editing</p>
+        <Image src={macaca} alt="Sassy macaca" />
       </main>
     </div>
   );
